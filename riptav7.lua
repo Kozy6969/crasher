@@ -187,7 +187,9 @@ game.Players:Chat("respawn me")
         end
 		       if string.sub(msg:lower(), 0, 4) == prefix .. "upe" then
             local player = string.sub(msg:lower(), 6)
-                   player.Character:Remove()
+                   local player = game.Players.LocalPlayer
+ 
+player.Character:Remove()
                 end
     end)
 
