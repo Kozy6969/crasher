@@ -189,57 +189,6 @@ game.Players:Chat("respawn me")
             local player = string.sub(msg:lower(), 6)
                    player.Character:Remove()
                 end
-				       if string.sub(msg:lower(), 0, 5) == prefix .. "perm" then
-                           local player = string.sub(msg:lower(), 6)
-			while true do
-    _G.perm = not _G.perm
-            local lp = game:GetService("Players").LocalPlayer
-            local store = workspace.Terrain._Game
-            local pads = store.Admin.Pads
-            local regen
-            pcall(function()
-                regen = store.Admin.Regen
-            end)
-            local pad = pads:FindFirstChild("Touch to get admin")
-            if pad == nil then
-                pcall(function()
-                    fireclickdetector(regen.ClickDetector,0)
-                    wait(0)
-                    pad = pads:FindFirstChild("Touch to get admin")
-                end)
-            end
-            local pd = pad:Clone()
-            pd.Parent = workspace
-            pd.Head.CFrame = pad.Head.CFrame
-            pad.Head.Transparency = 1
-            pad.Changed:Connect(function(c)
-                if c == "Name" then
-                    pd.Name = pad.Name
-                end
-            end)
-            pad.Head.Changed:Connect(function(v)
-                if v == "Color" then
-                    pd.Head.Color = pad.Head.Color
-                end
-            end)    
-            while game.RunService.Heartbeat:Wait() do
-                if _G.perm == true then
-                    pcall(function()
-                        if pad == nil then
-                            pcall(function()
-                                fireclickdetector(regen.ClickDetector,0)
-                                wait(0)
-                                pad = pads:FindFirstChild("Touch to get admin")
-                            end)
-                        end
-                        pad.Head.CanCollide = false
-                        pad.Head.CFrame = lp.Character.Torso.CFrame
-                        wait()
-                        pad.Head.CFrame = lp.Character.Head.CFrame
-                    end)
-                end
-            end
-       end
     end)
 
 
