@@ -164,7 +164,7 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-28, 8, 
             local player = string.sub(msg:lower(), 6)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))() --type ;float fast cause pro
 wait(2)
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-500.999969, 1.35400391, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-500.999969, 1.37400391, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1)
 game.Players:Chat("gear me 108158379")
 game.Players:Chat("gear me 108158379")
 wait(2)
