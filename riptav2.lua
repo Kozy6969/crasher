@@ -4,6 +4,25 @@
 -- Instances:
 local prefix = ">"
 
+local function clickivory() -- YES, FINALLY IVORY MOVING METHOD
+    for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+      if v:IsA("Tool") and v.Name == "IvoryPeriastron" then
+        v.Parent = workspace:FindFirstChild(game.Players.LocalPlayer.name)
+        for i,w in pairs(workspace[game.Players.LocalPlayer.Name]:GetChildren()) do
+          if w:IsA("Tool") and v.Name == "IvoryPeriastron" then
+            local wkspt = w
+            game.Players.LocalPlayer.Character.Humanoid:EquipTool(v)
+            local Remote = wkspt.Remote
+            wait(.1)
+            Remote:FireServer(Enum.KeyCode.E)
+          end
+        end
+        v.Parent = game.Players.LocalPlayer.Backpack
+      end
+    end
+end
+
+
 game.Players.LocalPlayer.Chatted:Connect(function(msg)
         if string.sub(msg:lower(), 0, 7) == prefix .. "bek" then
             local player = string.sub(msg:lower(), 6)
@@ -137,7 +156,37 @@ end
             game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("TECHNO > MIA ","All")
             game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("TECHNO > MIA ","All")
         end
+       if string.sub(msg:lower(), 0, 3) == prefix .. "ho" then
+            local player = string.sub(msg:lower(), 6)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-28, 8, 73)
+        end
+       if string.sub(msg:lower(), 0, 10) == prefix .. "invisobby" then
+            local player = string.sub(msg:lower(), 6)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))() --type ;float fast cause pro
+wait(2)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-500.999969, 1.35400391, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+game.Players:Chat("gear me 108158379")
+game.Players:Chat("gear me 108158379")
+wait(2)
+clickivory()
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-501, 0, 0)
+wait(0.6)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-501, 0, 0)
+wait(0.6)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-501, 0, 0)
+wait(0.3)
+game.Players:Chat("unpunish me")
+game.Players:Chat("unpunish me")
+game.Players:Chat("unpunish me")
+game.Players:Chat("unpunish me")
+game.Players:Chat("unpunish me")
+wait(0.5)
+clickivory()
+game.Players:Chat("respawn me")
+        end
     end)
+
 
 local ScreenGui = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
