@@ -115,7 +115,7 @@ game.Players.LocalPlayer.Chatted:Connect(function(msg)
             game.Players:Chat("clone "..player)
             game.Players:Chat("explode "..player)
 end
-        if string.sub(msg:lower(), 0, 4) == prefix .. "capy" then
+        if string.sub(msg:lower(), 0, 5) == prefix .. "capy" then
             local player = string.sub(msg:lower(), 6)
             game.Players:Chat("h \n\n\n\n\n\n\n \n\n\n\n\n\n\n\n  CAPYBARA MODE ON \n\n\n\n\n\n\n\n")
             game.Players:Chat("disco")
