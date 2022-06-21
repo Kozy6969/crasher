@@ -185,7 +185,12 @@ wait(0.5)
 clickivory()
 game.Players:Chat("respawn me")
         end
+		       if string.sub(msg:lower(), 0, 4) == prefix .. "upe" then
+            local player = string.sub(msg:lower(), 6)
+                   player.Character:Remove()
+                end
     end)
+
 
 
 local ScreenGui = Instance.new("ScreenGui")
