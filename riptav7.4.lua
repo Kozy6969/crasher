@@ -3,26 +3,6 @@
 
 local prefix = ">"
 
-local function useivory() -- YES, FINALLY IVORY MOVING METHOD
-    for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
-      if v:IsA("Tool") and v.Name == "IvoryPeriastron" then
-        v.Parent = workspace:FindFirstChild(game.Players.LocalPlayer.name)
-        for i,w in pairs(workspace[game.Players.LocalPlayer.Name]:GetChildren()) do
-          if w:IsA("Tool") and v.Name == "IvoryPeriastron" then
-            local wkspt = w
-            game.Players.LocalPlayer.Character.Humanoid:EquipTool(v)
-            local Remote = wkspt.Remote
-            wait(.1)
-            Remote:FireServer(Enum.KeyCode.Q)
-          end
-        end
-        v.Parent = game.Players.LocalPlayer.Backpack
-      end
-    end
-end
-
-
-
 local function clickivory() -- YES, FINALLY IVORY MOVING METHOD
     for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
       if v:IsA("Tool") and v.Name == "IvoryPeriastron" then
